@@ -34,11 +34,11 @@
         name: pm2
         global: yes
 
-    - name: Démarrer l'application via pm2
+    - name: launch nodejs app
       shell: pm2 start /var/www/my-node-project/myapp/bin/www
 
     - name: Copier le fichier vhost
       shell: cp /var/www/my-node-project/vhost /etc/nginx/sites-enabled/default
 
-    - name: Redémarrage de nginx
+    - name: Redemarrage de nginx
       shell: service nginx restart
